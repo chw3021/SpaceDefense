@@ -2,6 +2,7 @@ package io.github.chw3021.spacedefense.lwjgl3;
 
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
+
 import io.github.chw3021.spacedefense.SMain;
 
 /** Launches the desktop (LWJGL3) application. */

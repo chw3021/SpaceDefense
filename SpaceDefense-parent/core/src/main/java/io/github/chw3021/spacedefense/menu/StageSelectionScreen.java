@@ -31,15 +31,15 @@ public class StageSelectionScreen implements Screen {
         batch = new SpriteBatch();
         background = new Texture("space_background.png");
         stage = new Stage();
-        
+
         // Skin과 스타일을 설정
-        skin = new Skin(Gdx.files.internal("uiskin.json"));
+        skin = new Skin(Gdx.files.internal("skin/uiskin.json"));
         Gdx.input.setInputProcessor(stage);
 
         Table table = new Table();
         table.top().center();
         table.setFillParent(true);
-		
+
         // 버튼 생성 (스테이지 1, 2, 3 버튼)
         TextButton stage1Button = new TextButton("Stage 1", skin);
         TextButton stage2Button = new TextButton("Stage 2", skin);
@@ -51,7 +51,7 @@ public class StageSelectionScreen implements Screen {
                 game.setScreen(new GameScreen(game, 1)); // 스테이지 1로 게임 시작
 		    }
 		});
-        
+
         table.add(stage1Button).fillX().uniformX().pad(10);
         table.row().pad(10, 0, 10, 0);
         table.add(stage2Button).fillX().uniformX().pad(10);

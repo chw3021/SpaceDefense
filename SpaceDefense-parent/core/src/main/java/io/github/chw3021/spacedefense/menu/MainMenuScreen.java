@@ -31,19 +31,19 @@ public class MainMenuScreen implements Screen {
         stage = new Stage();
 
         // Skin과 스타일을 설정
-        skin = new Skin(Gdx.files.internal("uiskin.json"));
+        skin = new Skin(Gdx.files.internal("skin/uiskin.json"));
         Gdx.input.setInputProcessor(stage);
 
-		
+
 
         Table table = new Table();
         table.top().center();
         table.setFillParent(true);
-		
-		TextButton startGameButton = new TextButton("GameStart", skin);
-		TextButton settingsButton = new TextButton("Setting", skin);
-		TextButton rankingButton = new TextButton("Ranking", skin);
-		
+
+		TextButton startGameButton = new TextButton("GameStart", skin, "round");
+		TextButton settingsButton = new TextButton("Setting", skin, "round");
+		TextButton rankingButton = new TextButton("Ranking", skin, "round");
+
 		// 클릭 이벤트 설정
 		startGameButton.addListener(new ClickListener() {
 		    @Override
@@ -51,14 +51,14 @@ public class MainMenuScreen implements Screen {
 		        game.setScreen(new StageSelectionScreen(game));
 		    }
 		});
-		
+
 		settingsButton.addListener(new ClickListener() {
 		    @Override
 		    public void clicked(InputEvent event, float x, float y) {
 		        System.out.println("환경 설정 버튼 클릭됨");
 		    }
 		});
-		
+
 		rankingButton.addListener(new ClickListener() {
 		    @Override
 		    public void clicked(InputEvent event, float x, float y) {
